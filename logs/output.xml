@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.4 on win32)" generated="20230728 00:57:24.741" rpa="false" schemaversion="3">
+<suite id="s1" name="cadastroMarca" source="C:\Link rafael1\tests\cadastroMarca.robot">
+<test id="s1-t1" name="Cadastrar uma marca" line="6">
+<kw name="Dado que o usuário logado" library="cadastroMarca_keywords">
+<kw name="Dado que o usuário abre o navegador" library="login_keywords">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>1000</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230728 00:57:24.906" endtime="20230728 00:57:24.906"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>url=https://rafael1.varejofacil.com/</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230728 00:57:24.906" level="INFO">Opening browser 'chrome' to base url 'https://rafael1.varejofacil.com/'.</msg>
+<status status="PASS" starttime="20230728 00:57:24.906" endtime="20230728 00:57:57.926"/>
+</kw>
+<status status="PASS" starttime="20230728 00:57:24.906" endtime="20230728 00:57:57.926"/>
+</kw>
+<kw name="Quando o usuário digita o username e a senha" library="login_keywords">
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[contains(@type,'text')]</arg>
+<arg>admin</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230728 00:57:57.927" level="INFO">Typing password into text field '//input[contains(@type,'text')]'.</msg>
+<msg timestamp="20230728 00:57:58.035" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230728 00:57:58.161" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230728 00:57:57.926" endtime="20230728 00:57:58.161"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[contains(@autocomplete,'new-password')]</arg>
+<arg>admin</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230728 00:57:58.161" level="INFO">Typing password into text field '//input[contains(@autocomplete,'new-password')]'.</msg>
+<msg timestamp="20230728 00:57:58.216" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230728 00:57:58.329" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230728 00:57:58.161" endtime="20230728 00:57:58.329"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@data-cy='login-entrar-button'][contains(.,'Entrar')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230728 00:57:58.329" level="INFO">Clicking button '//button[@data-cy='login-entrar-button'][contains(.,'Entrar')]'.</msg>
+<status status="PASS" starttime="20230728 00:57:58.329" endtime="20230728 00:57:58.458"/>
+</kw>
+<status status="PASS" starttime="20230728 00:57:57.926" endtime="20230728 00:57:58.458"/>
+</kw>
+<kw name="Então a página é visualizada com sucesso" library="login_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class='HeaderMenu_main_3gesO'][contains(.,'Painel')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230728 00:57:58.458" endtime="20230728 00:58:00.516"/>
+</kw>
+<status status="PASS" starttime="20230728 00:57:58.458" endtime="20230728 00:58:00.516"/>
+</kw>
+<status status="PASS" starttime="20230728 00:57:24.906" endtime="20230728 00:58:00.516"/>
+</kw>
+<kw name="Quando ele cadastra uma marca" library="cadastroMarca_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='SideMenuItem_text_3BBft'][contains(.,'Produto')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230728 00:58:00.523" level="INFO">Clicking element '//div[@class='SideMenuItem_text_3BBft'][contains(.,'Produto')]'.</msg>
+<status status="PASS" starttime="20230728 00:58:00.523" endtime="20230728 00:58:00.603"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[contains(.,'Marcas')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230728 00:58:00.603" level="INFO">Clicking element '//a[contains(.,'Marcas')]'.</msg>
+<msg timestamp="20230728 00:58:00.867" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230728 00:58:00.867" level="FAIL">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=115.0.5790.110)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E06E73+48323]
+	(No symbol) [0x00D99661]
+	(No symbol) [0x00CA5308]
+	(No symbol) [0x00CA8751]
+	(No symbol) [0x00CA9991]
+	(No symbol) [0x00CA9A30]
+	(No symbol) [0x00CD5117]
+	(No symbol) [0x00CD3AB6]
+	(No symbol) [0x00CD253B]
+	(No symbol) [0x00CD193E]
+	(No symbol) [0x00CCA0FC]
+	(No symbol) [0x00CEA8DC]
+	(No symbol) [0x00CC9BD6]
+	(No symbol) [0x00CEAC34]
+	(No symbol) [0x00CFCAC2]
+	(No symbol) [0x00CEA6D6]
+	(No symbol) [0x00CC847C]
+	(No symbol) [0x00CC957D]
+	GetHandleVerifier [0x0106FD5D+2575277]
+	GetHandleVerifier [0x010AF86E+2836158]
+	GetHandleVerifier [0x010A96DC+2811180]
+	GetHandleVerifier [0x00E941B0+626688]
+	(No symbol) [0x00DA314C]
+	(No symbol) [0x00D9F4B8]
+	(No symbol) [0x00D9F59B]
+	(No symbol) [0x00D921B7]
+	BaseThreadInitThunk [0x761E00C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77E97B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E97AEE+238]
+</msg>
+<status status="FAIL" starttime="20230728 00:58:00.603" endtime="20230728 00:58:00.878"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@data-cy='tabela-marcas-botao-acao-button'][contains(.,'Adicionar')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230728 00:58:00.878" endtime="20230728 00:58:00.878"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@required='required']</arg>
+<arg>nestle</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230728 00:58:00.878" endtime="20230728 00:58:00.878"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@disabled='disabled'][contains(.,'Salvar')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230728 00:58:00.878" endtime="20230728 00:58:00.878"/>
+</kw>
+<status status="FAIL" starttime="20230728 00:58:00.516" endtime="20230728 00:58:00.878"/>
+</kw>
+<kw name="Então a marca é cadastrada com sucesso" library="cadastroMarca_keywords">
+<status status="NOT RUN" starttime="20230728 00:58:00.878" endtime="20230728 00:58:00.878"/>
+</kw>
+<status status="FAIL" starttime="20230728 00:57:24.906" endtime="20230728 00:58:00.878">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=115.0.5790.110)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00E06E73+48323]
+	(No symbol) [0x00D99661]
+	(No symbol) [0x00CA5308]
+	(No symbol) [0x00CA8751]
+	(No symbol) [0x00CA9991]
+	(No symbol) [0x00CA9A30]
+	(No symbol) [0x00CD5117]
+	(No symbol) [0x00CD3AB6]
+	(No symbol) [0x00CD253B]
+	(No symbol) [0x00CD193E]
+	(No symbol) [0x00CCA0FC]
+	(No symbol) [0x00CEA8DC]
+	(No symbol) [0x00CC9BD6]
+	(No symbol) [0x00CEAC34]
+	(No symbol) [0x00CFCAC2]
+	(No symbol) [0x00CEA6D6]
+	(No symbol) [0x00CC847C]
+	(No symbol) [0x00CC957D]
+	GetHandleVerifier [0x0106FD5D+2575277]
+	GetHandleVerifier [0x010AF86E+2836158]
+	GetHandleVerifier [0x010A96DC+2811180]
+	GetHandleVerifier [0x00E941B0+626688]
+	(No symbol) [0x00DA314C]
+	(No symbol) [0x00D9F4B8]
+	(No symbol) [0x00D9F59B]
+	(No symbol) [0x00D921B7]
+	BaseThreadInitThunk [0x761E00C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77E97B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x77E97AEE+238]
+</status>
+</test>
+<status status="FAIL" starttime="20230728 00:57:24.746" endtime="20230728 00:58:00.888"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="cadastroMarca">cadastroMarca</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
